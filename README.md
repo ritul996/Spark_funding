@@ -1,1 +1,3 @@
 # Spark_funding
+Gathering data from Crunchbase.com and Information related to companies investing in different sectors and in different countries was collected The data from different files were understood and the relationship of the data from different files were mapped, first sight analysis was done at this step.
+Data from different files were cleaned up at this stage and all the data was collected in the single file.Data was analyzed for different countries , for different funding types and for different sectors considering the constraint using R and Tableau.As per the constraints, top sectors and top 3 English speaking countries where most of the investments are occurring are identified and companies where Spark Fund can invest were recommended
