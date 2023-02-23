@@ -205,3 +205,8 @@ D3_sector_top2<-filter(D3,D3$main_sector=="Social..Finance..Analytics..Advertisi
 D3_sector_top2_amt<-aggregate(D3_sector_top2$raised_amount_usd,by=list(D3_sector_top2$company_permalink),FUN=sum, na.rm=T)
 top_n(D3_sector_top2_amt,1,x)
 
+D3_sector_top2<-filter(D3,D3$main_sector=="Social..Finance..Analytics..Advertising")
+D3_sector_top2_amt<-aggregate(D3_sector_top2$raised_amount_usd,by=list(D3_sector_top2$company_permalink),FUN=sum, na.rm=T)
+top_n(D3_sector_top2_amt,1,x)
+
+
