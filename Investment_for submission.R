@@ -17,6 +17,7 @@ View(rounds2)
 str(rounds2)
 View(companies)
 str(companies)
+#apply machining learning model 
 
 #Convert the company permalink unique identifier to lower case for simplfying further operations
 rounds2$company_permalink <- str_to_lower(rounds2$company_permalink, locale = "en")
