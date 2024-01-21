@@ -1,0 +1,34 @@
+import requests
+
+# GitHub repository details
+owner = "your_username"
+repo = "your_repository"
+access_token = "your_github_access_token"
+
+# Function to list pull requests
+def list_pull_requests(owner, repo, access_token):
+    url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
+    headers = {"Authorization": f"Bearer {access_token}"}
+
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        pull_requests = response.json()
+        return pull_requests
+    else:
+        print(f"Error: {response.status_code}, {response.text}")
+        return None
+
+# List pull requests for the specified repository
+pull_requests = list_pull_requests(owner, repo, access_token)
+
+if pull_requests:
+    print(f"Pull Requests in {owner}/{repo}:")
+    for pr in pull_requests:
+        print(f"Title: {pr['title']}")
+        print(f"Number: {pr['number']}")
+        print(f"State: {pr['state']}")
+        print(f"URL: {pr['html_url']}")
+        print("---")
+else:
+    print("Failed to fetch pull requests.")
