@@ -1,9 +1,9 @@
 import requests
 
 # GitHub repository details
-owner = "your_username"
-repo = "your_repository"
-access_token = "your_github_access_token"
+owner = "ritul996"
+repo = "Spark_funding"
+access_token = "237823jjdsj48nf"
 
 # Function to list pull requests
 def list_pull_requests(owner, repo, access_token):
